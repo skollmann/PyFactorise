@@ -1,8 +1,7 @@
 #!/usr/bin/python3 -O
 
-from math import sqrt, log2, ceil, floor
+from math import sqrt, log2, ceil, floor, gcd
 import random
-from fractions import gcd
 import sys
 from builtins import ValueError
 
