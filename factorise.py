@@ -1,9 +1,15 @@
 #!/usr/bin/python3 -O
 
-from math import sqrt, log2, ceil, floor, gcd
+from math import sqrt, log2, ceil, floor
 import random
 import sys
 from builtins import ValueError
+
+# gcd was added to math in Python 3.5 and removed from fractions in 3.9
+try:
+    from math import gcd
+except ImportError:
+    from fractions import gcd
 
 
 """This script factorises a natural number given as a command line
