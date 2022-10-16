@@ -1,4 +1,4 @@
-# PythonFactorise
+# PyFactorise
 Python implementation of the Self Initialising Quadratic Sieve.
 
 factorise.py factorises a natural number given as a command line parameter into 
