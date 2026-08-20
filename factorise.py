@@ -898,7 +898,10 @@ def find_all_prime_factors(n):
             factors.append(rem)
             break
 
-        for f in find_prime_factors(rem):
+        # find_prime_factors may report a prime more than once (e.g. [p, p, q]
+        # for n = p^2 * q); the loop below already divides out every occurrence
+        # of f, so iterate over the distinct primes only.
+        for f in set(find_prime_factors(rem)):
             print("Prime factor found: %d" % f)
             assert is_probable_prime(f)
             assert rem % f == 0
